@@ -44,10 +44,10 @@ erDiagram
         string category_id FK
     }
 
-    COORDENADOR ||--o{ PROJECT: "cadastra"
-    PROJECT ||--o{ DEV: "tem"
-    PROJECT ||--o{ ANGEL: "tem"
-    PROJECT ||--o{ PROJECT_CATEGORY: "tem"
-    CATEGORY ||--o{ PROJECT_CATEGORY: "tem"
-    COORDENADOR ||--o{ DEV: "cadastra"
-    COODERNADOR ||--o{ ANGEL: "cadastra"
+    COORDENADOR ||--o{ PROJECT: "1, cadastra N"
+    PROJECT ||--o{ DEV: "1, tem N"
+    PROJECT ||--o{ ANGEL: "1, tem N"
+    PROJECT ||--o{ PROJECT_CATEGORY: "1, tem N"
+    CATEGORY ||--o{ PROJECT_CATEGORY: "1, tem N"
+    COORDENADOR ||--o{ DEV: "1, cadastra N"
+    COORDENADOR ||--o{ ANGEL: "1, cadastra N"
