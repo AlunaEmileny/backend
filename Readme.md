@@ -1,6 +1,6 @@
 ```mermaid
 erDiagram
-    USER {
+    COORDENADOR {
         string id PK
         string name
         string email
@@ -16,7 +16,7 @@ erDiagram
         string banner
         datetime createDateTime
         datetime updateDateTime
-        boolean status 
+        enum status {"em andamento", "concluido"}
         string coordinator_id FK
     }
 
@@ -27,7 +27,7 @@ erDiagram
         string project_id FK
     }
 
-    ANGEL {
+    ANJO {
         string id PK
         string name
         string photo
@@ -44,10 +44,10 @@ erDiagram
         string category_id FK
     }
 
-    USER ||--o{ PROJECT: "cadastra"
+    COORDENADOR ||--o{ PROJECT: "cadastra"
     PROJECT ||--o{ DEV: "tem"
     PROJECT ||--o{ ANGEL: "tem"
     PROJECT ||--o{ PROJECT_CATEGORY: "tem"
     CATEGORY ||--o{ PROJECT_CATEGORY: "tem"
-    USER ||--o{ DEV: "cadastra"
-    USER ||--o{ ANGEL: "cadastra"
+    COORDENADOR ||--o{ DEV: "cadastra"
+    COODERNADOR ||--o{ ANGEL: "cadastra"
