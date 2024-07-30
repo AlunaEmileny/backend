@@ -16,7 +16,7 @@ erDiagram
         string banner
         datetime createDateTime
         datetime updateDateTime
-        enum status {"em andamento", "concluido"}
+        boolean status
         string coordinator_id FK
     }
 
